@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://der5jdlvj676l"]
+
+[ext_resource type="Texture2D" uid="uid://cnjq1ed03qfka" path="res://clouds/clouds.png" id="1_7pk5w"]
+[ext_resource type="Script" uid="uid://c4ovfolme1p7n" path="res://clouds/cloud.gd" id="1_jfty2"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_naxjc"]
+size = Vector2(11, 7)
+
+[node name="cloud" type="Area2D" unique_id=1779433142 groups=["cloud"]]
+script = ExtResource("1_jfty2")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=553769839]
+texture_filter = 1
+texture = ExtResource("1_7pk5w")
+hframes = 2
+vframes = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1790982013]
+position = Vector2(-0.5, 0.5)
+shape = SubResource("RectangleShape2D_naxjc")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

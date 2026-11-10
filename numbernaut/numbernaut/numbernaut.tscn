@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://cvid4snyw6g11"]
+
+[ext_resource type="Texture2D" uid="uid://buu15cxt2wwyh" path="res://numbernaut/numbernaut.png" id="1_48ixu"]
+[ext_resource type="Script" uid="uid://dih5gny4bamr" path="res://numbernaut/numbernaut.gd" id="1_dafl5"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_48ixu"]
+size = Vector2(8, 9)
+
+[node name="numbernaut" type="CharacterBody2D" unique_id=162753014]
+script = ExtResource("1_dafl5")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=787769325]
+position = Vector2(0, -4.5)
+shape = SubResource("RectangleShape2D_48ixu")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=504624335]
+texture_filter = 1
+texture = ExtResource("1_48ixu")
+offset = Vector2(0, -7)
+hframes = 2
+vframes = 3
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1339856801]
+limit_left = 0
+limit_top = 0
+limit_right = 100

@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://drlvxjsbar4ag"]
+
+[ext_resource type="Texture2D" uid="uid://uxhsq6vhgeia" path="res://world/stars/stars.png" id="1_po20t"]
+
+[node name="stars" type="ParallaxBackground" unique_id=990950123]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="." unique_id=1120301359]
+motion_scale = Vector2(0.5, 0.5)
+motion_mirroring = Vector2(0, 320)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxLayer" unique_id=93336822]
+texture_filter = 1
+texture = ExtResource("1_po20t")
+centered = false

@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://ivilgutofd4s"]
+
+[ext_resource type="PackedScene" uid="uid://cvid4snyw6g11" path="res://numbernaut/numbernaut.tscn" id="1_6xmxd"]
+[ext_resource type="Script" uid="uid://bn2eiqo44fi88" path="res://world/world.gd" id="1_4717r"]
+[ext_resource type="PackedScene" uid="uid://drlvxjsbar4ag" path="res://world/stars/stars.tscn" id="2_tcf2h"]
+[ext_resource type="PackedScene" uid="uid://c7gonqjtakbbs" path="res://ui/score/score.tscn" id="4_h5o24"]
+[ext_resource type="PackedScene" uid="uid://bxfeq4i0nt0yl" path="res://ui/menu/menu.tscn" id="5_mmdvd"]
+
+[node name="world" type="Node2D" unique_id=133594450]
+script = ExtResource("1_4717r")
+
+[node name="numbernaut" parent="." unique_id=162753014 instance=ExtResource("1_6xmxd")]
+position = Vector2(50, 80)
+
+[node name="stars" parent="." unique_id=990950123 instance=ExtResource("2_tcf2h")]
+
+[node name="score" parent="." unique_id=1138285693 instance=ExtResource("4_h5o24")]
+
+[node name="menu" parent="." unique_id=261258141 instance=ExtResource("5_mmdvd")]
